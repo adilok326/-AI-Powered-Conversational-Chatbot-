@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-top">
+            <div class="brand">
+                <div class="brand-icon"><i class="fas fa-robot"></i></div>
+                <span class="brand-name">GeminiChat</span>
+            </div>
+            <button class="new-chat-btn" id="clear-btn" title="New Chat">
+                <i class="fas fa-plus"></i>
+                <span>New Chat</span>
+            </button>
+        </div>
+
+        <div class="chat-history">
+            <p class="history-label">Recent</p>
+            <div class="history-item active">
+                <i class="fas fa-comment-dots"></i>
+                <span>Current Session</span>
+            </div>
+            <div class="history-item">
+                <i class="fas fa-comment-dots"></i>
+                <span>AI Project Help</span>
+            </div>
+            <div class="history-item">
+                <i class="fas fa-comment-dots"></i>
+                <span>Resume Review</span>
+            </div>
+            <div class="history-item">
+                <i class="fas fa-comment-dots"></i>
+                <span>Python Questions</span>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="model-badge">
+                <i class="fas fa-microchip"></i>
+                <span>Gemini 1.5 Flash</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Sidebar toggle for mobile -->
+    <button class="sidebar-toggle" id="sidebar-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Chat -->
+    <main class="chat-section">
+
+        <header class="chat-header">
+            <div class="header-left">
+                <div class="header-avatar"><i class="fas fa-robot"></i></div>
+                <div class="header-info">
+                    <h2>AI Assistant</h2>
+                    <span class="status-dot"></span><span class="status-text">Online</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="icon-btn theme-btn" id="theme-btn" title="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="messages-container" id="messages-container">
+            <div class="welcome-screen" id="welcome-screen">
+                <div class="welcome-icon"><i class="fas fa-robot"></i></div>
+                <h1>How can I help you today?</h1>
+                <p>I'm your AI Assistant powered by Gemini. Ask me anything.</p>
+                <div class="suggestion-chips">
+                    <button class="chip" onclick="fillInput('Explain quantum computing simply')">
+                        <i class="fas fa-atom"></i> Explain quantum computing
+                    </button>
+                    <button class="chip" onclick="fillInput('Write a Python function to sort a list')">
+                        <i class="fas fa-code"></i> Write Python code
+                    </button>
+                    <button class="chip" onclick="fillInput('Give me 5 productivity tips')">
+                        <i class="fas fa-lightbulb"></i> Productivity tips
+                    </button>
+                    <button class="chip" onclick="fillInput('Summarize the key ideas of stoicism')">
+                        <i class="fas fa-book"></i> Philosophy summary
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="chat-footer">
+            <div class="input-container">
+                <form id="chat-form" class="input-wrapper">
+                    <textarea
+                        id="user-input"
+                        placeholder="Message AI Assistant..."
+                        autocomplete="off"
+                        rows="1"
+                        required
+                    ></textarea>
+                    <button type="submit" id="send-btn" title="Send message">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+                <p class="footer-note">AI can make mistakes. Consider checking important info.</p>
+            </div>
+        </footer>
+
+    </main>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

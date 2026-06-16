@@ -11,7 +11,7 @@ A full-stack, responsive conversational AI web application built using Python, F
 * **Dynamic Input Handling:** Client-side JavaScript manages asynchronous DOM injection and runtime input validation.
 
 ### 📸 Application Interface
-![Chat Application UI](images/Screenshot%202026-06-16%20190407.png)
+![Chat Application UI](images/Screenshot%202026-06-16-190407.png)
 ## 🛠️ Tech Stack
 
 * **Frontend:** HTML5, CSS3 (Custom Variables & Keyframe Animations), JavaScript (ES6 Fetch API, DOM Manipulation)

@@ -2,7 +2,7 @@
 
 A full-stack, responsive conversational AI web application built using Python, Flask, and the Google Gemini API. The application provides a modern, ChatGPT-like interface featuring real-time dialogue processing, server-side context-aware conversation memory, and an optimized dark-themed user experience.
 
-## 🚀 Features
+## Features
 
 * **Real-Time Responses:** Interfaces asynchronously with the Google Gemini API (`gemini-2.5-flash`) for rapid text generation.
 * **Context-Aware Memory:** Implements server-side session tracking using Flask states to handle seamless multi-turn conversations.
@@ -10,9 +10,9 @@ A full-stack, responsive conversational AI web application built using Python, F
 * **Modern UI/UX:** Dark-mode interface designed with responsive CSS, interactive layout structures, and animated typing indicators.
 * **Dynamic Input Handling:** Client-side JavaScript manages asynchronous DOM injection and runtime input validation.
 
-### 📸 Application Interface
+### Application Interface
 ![Chat Application UI](interference.png)
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Frontend:** HTML5, CSS3 (Custom Variables & Keyframe Animations), JavaScript (ES6 Fetch API, DOM Manipulation)
 * **Backend:** Python 3.12+, Flask (Session State Management, Routing)
@@ -21,7 +21,7 @@ A full-stack, responsive conversational AI web application built using Python, F
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 chatbot/
